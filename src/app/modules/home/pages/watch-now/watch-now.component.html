@@ -1,0 +1,59 @@
+<section class="page-container w-full h-full ">
+
+    
+
+    <ng-container #carousel class="carousel">
+        <ng-container [@fadeInOut]="currentItem">
+        @for (item of items; track $index) {
+
+            <div style="background-image: url('{{item.imageUrl}}');" [class.active]="currentItem === $index" class="quick-watch-section flex flex-col items-center justify-between w-full h-3/4 pt-10 px-6 pb-6  bg-cover bg-center relative">
+                <div class="layer w-full h-full absolute bg-black top-0 left-0 opacity-75"></div>
+                <div class="watch-now-bar w-full flex items-center justify-between relative z-50">
+                    <span class="SF-Bold text-3xl text-white">Watch Now</span>
+        
+                    <div class="right flex items-center justify-center gap-4">
+                        <div class="volume-btn rounded-full bg-[#D9DCDE] w-10 h-10 p-2 flex items-center justify-center">
+                            <img src="/assets/svgs/volume-slash.svg" alt="">
+                        </div>
+        
+                        <div style="background-image: url('/assets/images/memoji.png');" class="profile-btn rounded-full bg-[#41b3ff] w-10 h-10 p-2 flex items-center justify-center bg-cover bg-center">
+                            <!-- <img src="/assets/images/memoji.png" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="relative z-50 w-full flex flex-col items-center gap-6">
+                    <div class="movie-description flex flex-col items-center justify-center  z-50 bottom-40 left-0 w-full">
+                        <img class="w-48" src="{{item.title}}" alt="">
+    
+                        <div class="w-full flex flex-col gap-1">
+                            <span class="SF-Medium text-sm text-white opacity-50">Romance</span>
+
+                            <span class="SF-Regular text-sm text-white">An epic love story centered around an older man who reads aloud to a woman with Alzheimer's.</span>
+                        </div>
+                      
+                    </div>
+    
+                    <div class="button-container flex items-center bottom-24 left-0 justify-center gap-4 w-full z-50">
+                        <button class="tickets rounded-md px-4 py-3 flex items-center justify-center border-[2px] w-full border-solid border-[#545F71] bg-white SF-Medium text-[#545F71]">Buy Tickets</button>
+    
+                        <button class="watch-trailer rounded-md px-4 py-3 flex items-center justify-center border w-full border-solid border-[#545F71] bg-[#545F71] SF-Medium text-white">Watch Trailer</button>
+                    </div>
+
+                    <div class="nav-circles flex justify-center">
+                        @for (item of items; track $index) {
+                            <div class="nav-circle w-2 h-2 rounded-full bg-[#D9D9D9]" [class.active]="currentItem === $index" (click)="goToItem($index)"></div>
+                        }
+                      </div>
+                </div>
+
+                <!-- <img [src]="item.imageUrl" alt="Image"> -->
+            
+            </div>
+        }
+    </ng-container>
+    </ng-container>
+    
+    
+</section>

@@ -1,0 +1,30 @@
+.carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .quick-watch-section {
+    display: none;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+  }
+
+.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .nav-circle {
+    margin: 0 2.5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .nav-circle.active {
+    background-color: #545F71;
+  }
