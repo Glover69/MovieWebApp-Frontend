@@ -6,11 +6,12 @@
     transition: width 0.3s ease, background-color 0.3s ease; /* Add transitions for width and background-color changes */
   }
 
-  .nav-item.active span {
+  .nav-item.activeItem span {
     color: #7B277C; /* Color for active item */
   }
   
-  .nav-item.active .line {
+  .nav-item.activeItem .line.activeItem {
+    display: flex;
     width: 0.5rem; /* Adjust width as needed */
     background-color: #7B277C; /* Color for active item's line */
   }
@@ -22,6 +23,6 @@
 
   
   
-  .nav-item.active img {
+  .nav-item.activeItem img {
     filter: invert(19%) sepia(19%) saturate(7365%) hue-rotate(278deg) brightness(93%) contrast(91%);
   }
