@@ -1,34 +1,46 @@
-<section class="main-container p-6 flex items-center justify-between border-t border-[#D5DEE7]">
+<section class="main-container px-6 py-4 flex items-center justify-between border-t border-[#D5DEE7]">
 
-    <div class="nav-item flex flex-col items-center justify-center gap-1">
+    <div routerLink="/home/watch-now" [class.active]="activeItem === 'watchNow'"
+    (click)="setActiveItem('watchNow')" class="nav-item flex flex-col items-center justify-center gap-1">
 
         <img src="/assets/svgs/video-circle.svg" alt="">
 
-        <span class="SF-Bold text-[#7B277C] text-sm">Watch Now</span>
+        <span class="SF-Bold tracking-tighter text-[#6A798A] text-sm">Watch Now</span>
+
+        <div [class.hidden]="activeItem !== 'watchNow'" class="line w-2 rounded-md h-[1px] p-[0.1rem] bg-[#7B277C]"></div>
 
     </div>
 
-    <div class="nav-item flex flex-col items-center justify-center gap-1">
+    <div routerLink="/home/search" [class.active]="activeItem === 'Search'"
+    (click)="setActiveItem('Search')" class="nav-item flex flex-col items-center justify-center gap-1">
 
         <img src="/assets/svgs/search-normal.svg" alt="">
 
-        <span class="SF-Bold text-[#6A798A] text-sm">Search</span>
+        <span class="SF-Bold tracking-tighter text-[#6A798A] text-sm">Search</span>
+
+        <div [class.hidden]="activeItem !== 'Search'" class="line hidden w-2 rounded-md h-[1px] p-[0.1rem] bg-[#7B277C]"></div>
 
     </div>
 
-    <div class="nav-item flex flex-col items-center justify-center gap-1">
+    <div routerLink="/home/my-watchlist" [class.active]="activeItem === 'WatchList'"
+    (click)="setActiveItem('WatchList')" class="nav-item flex flex-col items-center justify-center gap-1">
 
         <img src="/assets/svgs/save.svg" alt="">
 
-        <span class="SF-Bold text-[#6A798A] text-sm">My WatchList</span>
+        <span class="SF-Bold tracking-tighter text-[#6A798A] text-sm">My WatchList</span>
+
+        <div [class.hidden]="activeItem !== 'WatchList'" class="line hidden w-2 rounded-md h-[1px] p-[0.1rem] bg-[#7B277C]"></div>
 
     </div>
 
-    <div class="nav-item flex flex-col items-center justify-center gap-1">
+    <div routerLink="/home/tickets" [class.active]="activeItem === 'Ticket'"
+    (click)="setActiveItem('Ticket')" class="nav-item flex flex-col items-center justify-center gap-1">
 
         <img src="/assets/svgs/ticket.svg" alt="">
 
-        <span class="SF-Bold text-[#6A798A] text-sm">Tickets</span>
+        <span class="SF-Bold tracking-tighter text-[#6A798A] text-sm">Tickets</span>
+
+        <div [class.hidden]="activeItem !== 'Ticket'" class="line hidden w-2 rounded-md h-[1px] p-[0.1rem] bg-[#7B277C]"></div>
 
     </div>
 

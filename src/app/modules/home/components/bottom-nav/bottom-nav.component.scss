@@ -1,0 +1,27 @@
+.nav-item span {
+    transition: color 0.3s ease; /* Add transition for color change */
+  }
+
+  .nav-item .line {
+    transition: width 0.3s ease, background-color 0.3s ease; /* Add transitions for width and background-color changes */
+  }
+
+  .nav-item.active span {
+    color: #7B277C; /* Color for active item */
+  }
+  
+  .nav-item.active .line {
+    width: 0.5rem; /* Adjust width as needed */
+    background-color: #7B277C; /* Color for active item's line */
+  }
+
+  .nav-item img {
+    filter: invert(46%) sepia(8%) saturate(982%) hue-rotate(171deg) brightness(99%) contrast(85%);
+    // transition: filter 0.3s ease; /* Add transition for fill color change */
+  }
+
+  
+  
+  .nav-item.active img {
+    filter: invert(19%) sepia(19%) saturate(7365%) hue-rotate(278deg) brightness(93%) contrast(91%);
+  }
